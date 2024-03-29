@@ -10,7 +10,7 @@ import java.util.List;
 
 public class EmployeDao {
     private EntityManager entity = EntityMangerSingleton.getEntityManagerFactory().createEntityManager();
-    public void SaveStudent(Employe employe) {
+    public void SaveEmploye(Employe employe) {
         entity.getTransaction().begin();
         entity.persist(employe);
         entity.getTransaction().commit();

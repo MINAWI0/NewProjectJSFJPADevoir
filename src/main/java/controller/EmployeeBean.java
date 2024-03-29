@@ -17,12 +17,12 @@ public class EmployeeBean {
     public String addEmploye() {
         Employe st= new Employe();
         Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
-        sessionMap.put("student", st);
+        sessionMap.put("Employe", st);
         return  "/affecation.xhtml";
     }
     public String saveEmployee(Employe employe) {
         EmployeDao employeDao = new EmployeDao();
-        employeDao.SaveStudent(employe);
+        employeDao.SaveEmploye(employe);
         System.out.println(employe);
         return  "/EmployeList.xhtml";
     }
